@@ -1,0 +1,137 @@
+\documentclass[sigconf]{acmart}
+% \usepackage[hyphens]{url}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{pifont} %used for tickmark and crosses.
+% \usepackage[english]{babel}
+% \usepackage{array}
+\usepackage{multirow}
+% \usepackage{amssymb}
+% \usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem}
+\usepackage{xspace}
+\usepackage{datetime}
+
+% To support subfigures
+%\usepackage{caption}
+%\usepackage{subcaption}
+
+% \usepackage{graphicx}
+
+%%%%%%%%%% verbatim related
+\usepackage{fancyvrb}
+\fvset{framesep=2mm,fontsize=\scriptsize,framerule=.1mm,numbersep=1mm,commandchars=\\\{\}}
+\usepackage{listings}
+
+%%%%%%%%%%%%%%%%%%%% pseudocode-related stuff
+%\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\codecomment}[1]{\textcolor[rgb]{0.133,0.445,0.133}{#1}}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+% \usepackage{algorithmic}
+\newfloat{algorithm}{t}{lop}
+% change indentation!!
+%\setlength\fboxsep{0pt}
+\renewcommand\algorithmicindent{1em}
+%\newcommand{\INDSTATE}[1][1]{\State\hspace{#1\algorithmicindent}}
+% \newcommand{\INDSTATE}[1][1]{\State\hspace{2em}}
+%%%%%%%%%%%%%%%%%%%%
+
+% float control
+\renewcommand{\topfraction}{0.9}
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+% \usepackage[small,compact]{titlesec}
+
+% \usepackage{savetrees}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{mydef}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newsavebox{\verbbox}
+% \usepackage[stable]{footmisc}
+
+\newif\ifrev
+
+%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+
+\newcommand{\PPH}{{\sc \{Pass\}}\xspace}
+\hypersetup{%
+  pdftitle = {Put your title here.  It will show up when printing or looking at PDF details},
+  pdfkeywords = {},
+ % pdfauthor = { Justin Cappos},
+  pdfauthor = { Names removed for anonymous submission},
+  bookmarksnumbered,
+  bookmarksopen=true,
+  colorlinks=true,
+  urlcolor=[rgb]{.35,0,0},
+  linkcolor=[rgb]{.35,0,0},
+  citecolor=[rgb]{.35,0,0},
+  pdfstartview={FitH},
+}
+
+
+%%%%%%%%%%%%%%%%%%
+% COMMENT OUT NEXT LINE TO HIDE TODOs
+\revtrue
+%%%%%%%%%%%%%%%%%%
+
+\ifrev
+  \newcommand{\todo}[1]{{\color{red} [TODO: #1]}}
+\else
+  \newcommand{\todo}[1]{}
+\fi
+
+\newcommand{\tickmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\input{annotations}
+
+\begin{document}
+
+\title{Untitled SIGCSE Paper}
+
+
+% enable this to de-anonymize!
+%\newcommand{\showurlx}{{\url{https://whatever_the_url.is}}}
+\newcommand{\showurlx}{[redacted]}
+
+\author{
+%\IEEEauthorblockN{Justin Cappos}\\
+%New York University\\
+%jcappos@nyu.edu
+%\and
+Use whatever template the conference provides for the paper.tex file.
+% copy the following lines to add more authors
+% \and
+% {\rm Name}\\
+%Name Institution
+}
+
+\input{abstract}
+
+\maketitle
+
+\input{introduction}
+\input{threat-model}
+\input{background}
+\input{architecture}
+\input{implementation}
+\input{evaluation}
+\input{related-work}
+\input{conclusion}
+
+
+{\footnotesize \bibliographystyle{abbrv}
+\bibliography{bibdata}}
+
+\end{document}
