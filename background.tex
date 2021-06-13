@@ -148,8 +148,45 @@ surreptitiously pass information.
 
 \section{Cryptographic Hash Functions}
 
+The purpose of this trick is to generate an opportunity to for instruction on
+the details of cryptographic hash functions and expose a potential vulnerability
+in their use -- that the last input to the function has an out-sized impact on
+the function's output.
+
+
 \subsection{From the Audience's Perspective}
+
+The trick begins with the magician announcing that they are going to use a
+cryptographic hash function to choose a volunteer for the next trick.  The
+students in the audience are each asked to provide a random number which will be
+fed into the function in order to generate a seat number of one student in the
+class.  Using this process a student it selected and is asked to to come
+forward.  The magician explains that they have a magic deck of cards that allows
+anyone to determine what card is on top of it merely by waving their hand over
+it.  The magician shuffles the deck a few times and as the student to pass their
+hand over the deck while concentrating.  The student does so and, after a
+moment's hesitation, makes a guess.  The magician then shows the top card to the
+student and the audience revealing that the student's guess was correct.
 
 \subsection{Behind the Scenes}
 
+This trick relies on two keep components.  The first is the fact that when
+multiple inputs are provided to a cryptographic hash function, the last input
+has an out-sized impact on the functions output.  The second, is a time-honored
+magic show tool known as a ``stooge'' as stooge is an individual in league with
+the magician who will pretend to be an involved volunteer in order to make a
+trick possible.  In this trick, the stooge uses a piece of software to decide
+what ``random'' number to provide during the volunteer selection process in
+order to ensure that they are chosen by the magician's hash function.  To do so,
+the stooge must enter each number provided by the other students into their
+software.  Once chosen, the stooge plays their part in the trick and ``guesses''
+a pre-arranged card that the magician has ensured will remain on the top of the
+deck during the shuffling process.
+
 \subsection{Variations}
+
+The need to control the top card on the deck may be remove removed by using a
+special deck of cards that contains fifty-two copies of the same card.  Such a
+deck is readily and cheaply available at a magic supply store.
+
+
