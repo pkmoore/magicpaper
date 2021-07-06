@@ -282,12 +282,13 @@ side channels from secret information.
 \subsection{Attacks on Randomness}
 
 
-The purpose of this trick is to illustrate the importance of randomness in
+True randomness is important in many
 security-sensitive situations.
-The mechanism behind this lesson is a trick
-that covers cryptographic hash functions
-and a potential vulnerability
-in their use -- that the last input to the function has an out-sized impact on
+An attacker who is able to predict or influence the output of a random number
+generator may use this capability to circumvent cryptographic security controls.
+The trick we use to cover this concept
+illustrates a potential vulnerability in cryptographic hash functions
+-- that the last input to the function has a high degree of control over
 the function's output.
 
 
@@ -295,22 +296,29 @@ the function's output.
 
 The trick begins with the magician announcing that they are going to use a
 cryptographic hash function to choose a volunteer for the next trick.  The
-students in the audience are each asked to provide a random number which will be
+students in the audience are each asked to provide a random number to
+be
 fed into the function in order to generate a seat number of one student in the
-class.  Using this process a student is selected and asked to to come
-forward.  The magician explains that they have a magic deck of cards that allows
+class.  Using this process, a student is selected and asked to come
+forward.
+The magician explains that they have a magic deck of cards that allows
 anyone to determine what card is on top of it merely by waving their hand over
-it.  The magician shuffles the deck a few times and as the student to pass their
-hand over the deck while concentrating.  The student does so and, after a
+it.  The magician shuffles the deck a few times,
+and asks the student
+to concentrate on the top card while passing
+a hand over the deck.
+The student does so and, after a
 moment's hesitation, makes a guess.  The magician then shows the top card to the
 student and the audience revealing that the student's guess was correct.
 
 \subsubsection{Behind the Scenes}
 
-This trick relies on two components.  The first is the fact that when
+This trick relies on two key components.  The first is that when
 multiple inputs are provided to a cryptographic hash function, the last input
-has an out-sized impact on the functions output.  The second, is a time-honored
-magic show tool known as a ``stooge.'' A stooge is an individual in league with
+has a high amount of influence over functions output.
+The second, is a time-honored
+magic show technique known as a ``using a stooge.''
+A stooge is an individual in league with
 the magician who will pretend to be an involved volunteer in order to make a
 trick possible.  In this trick, the stooge uses a piece of software to decide
 what ``random'' number to provide during the volunteer selection process in
@@ -322,7 +330,7 @@ deck during the shuffling process.
 
 \subsubsection{Variations}
 
-The need to control the top card on the deck may be remove removed by using a
+The need to control the top card on the deck may be removed by using a
 special deck of cards that contains fifty-two copies of the same card.  Such a
 deck is readily and cheaply available at a magic supply store.
 
