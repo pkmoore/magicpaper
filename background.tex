@@ -183,11 +183,10 @@ students about what other
 sorts of information an attacker might try to steal and the purposes for which
 they might use it.
 The next step is to introduce a more formal definition of social engineering as
-a malicious attempt to steal personal information.  This definition includes
-spear fishing, watering hole attacks, and, as demonstrated by the trick, real
-world pretexting attacks.
-For each of these attack types we describe countermeasures that may be employed
-at the individual or organizational level.
+a malicious attempt to steal personal information.
+This discussion covers the aspects of human nature that allow social engineering
+attacks to succeed.  We show how these features may be employed through two real world examples -- extended
+warranty scams and phishing campaigns.
 At the end of this discussion we hope to leave students with a sense of the
 dangers of social engineering and a tool-set with which they can protect
 themselves and others.
@@ -267,12 +266,15 @@ In our lesson, we discuss side channels as
 a security weakness allows information to be extracted using attributes
 of a system rather than a flaw in an
 algorithm.
-Real world examples of such
+We cover how, in the real world,
+potential side channels include
 physical phenomena
-that can act as side channels
-include temperature,
+such as
+temperature,
 sound,
 and even electromagnetic output.
+In order to emphasize the impact of such attacks we cover two examples: Van
+Eck Phreaking and the SPECTRE vulnerabilities.
 The lesson further includes conversation about how to
 reduce the risk of a side channel attack
 by minimizing the number of potential channels
@@ -339,8 +341,15 @@ deck is readily and cheaply available at a magic supply store.
 The purpose of this lesson is to show students the importance of correct
 randomness and how an attacker with a small amount of influence can compromise a
 system.
-The trick we use reinforces this using
-a situation where ``users'' are able to provide input
-directly to a cryptographic hash function.
-We build on this by discussing how these functions work and their importance
-in applications like cryptocurrency and password storage.
+As such, we begin by covering the common pitfalls that occur when generating and
+using randomness.
+This foundation is used to explain both direct and input-based attacks on random
+number generators.
+The explanation of these attacks gives our students the background they need to
+understand how the magician's stooge was able to control the volunteer selection
+process.
+%The trick we use reinforces this using
+%a situation where ``users'' are able to provide input
+%directly to a cryptographic hash function.
+%We build on this by discussing how these functions work and their importance
+%in applications like cryptocurrency and password storage.
