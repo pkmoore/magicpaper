@@ -1,4 +1,4 @@
-\section{Trick Discussion}
+\section{A Lesson Wrapped in an Illusion}
 \label{SEC:background}
 
 
@@ -11,6 +11,16 @@ participants' perspectives.  We also include variations on each trick
 that can
 can improve the
 trick's impact or make it easier to perform under certain circumstances.
+
+\subsection{Lesson Layout}
+
+For our lesson we decided to cover three topics: social engineering, side
+channel attacks, and attacks on randomness.  We chose these topics because they
+are highly relevant to the modern information security field and offer a wide
+range of complexity.  Our hope was to illustrate how card magic can be used
+successfully to each anything from simple deceptive scenarios to complicated
+technical attacks.  We chose the presentation order of our tricks to ease
+students into the lesson before introducing more difficult concepts.
 
 \subsection{Social Engineering}
 
@@ -178,7 +188,7 @@ lesson.
 This trick is intended to spark a teachable moment about social engineering and
 its dangers.  The most powerful point comes with the reveal that the magician's
 intended goal was to steal personal information.
-Building upon this reveal allows instructors start a dialogue with
+Building upon this reveal allows instructors to start a dialogue with
 students about what other
 sorts of information an attacker might try to steal and the purposes for which
 they might use it.
@@ -193,12 +203,14 @@ themselves and others.
 
 \subsection{Side Channel Attacks}
 
-As the name implies, a side channel; attack is one that strikes indirectly,
-through timing information, power consumption, electromagnetic leaks, or even
+As the name implies, a side channel; attack is one that strikes indirectly
+by tracking seemingly unrelated phenomena
+such as timing information, power consumption, electromagnetic leaks, or even
 sounds.  To mirror this type of attack, the trick
-demonstrates how side channel attacks can allow an attacker to
-gather information they should not have been able to access.
-The main version of this trick uses a side channel to
+demonstrates how an attacker can
+gather information without directly exploiting
+a vulnerability in a system or algorithm.
+The main version of this trick enlists a ``side channel'' to
 enable the magician to easily
 find a particular card that has been lost in a shuffled deck.
 
@@ -213,21 +225,21 @@ been completely lost.
 Lastly, the magician proceeds through the deck face down and picks out the
 student's card when it appears.
 
-This trick's reveal comes when the magician informs the audience that they were
-able to find the card using a secret information side channel present in the
-deck and asks the audience if they have any ideas what it might be.
+This trick's reveal comes when the magician informs the audience
+the card was found using a secret information side channel present in the
+deck and asks if they have any idea of what it might be.
 At this point, the audience is either stumped or has figured out how the trick
 worked.  In either case,  the second phase of the lesson
 introduces additional types of side channels
-using an
-exercise where a pre-selected volunteer (or a teaching assistant)
+by having a pre-selected volunteer (or a teaching assistant)
 surreptitiously
-communicates the details of a card
+communicate the details of a card
 to the magician.
-The volunteer selects a card and ask the magician questions about its
+The volunteer selects a card and asks the magician questions about its
 attributes.
 For example, ``Is my card red or black?''
-When asking these questions the volunteer communicates the true nature of their
+When asking these questions the volunteer communicates the true nature of
+what they are conveying
 by varying the pitch of their voice, vocal cadence, or body language.
 After sufficient questioning, the magician is able to determine which card the
 volunteer picked and asks the audience if they were able to determine the side
@@ -260,24 +272,29 @@ non-obvious avenues an attacker might use to acquire secret information from a
 system.  A powerful example of such a channel is provided by the tricks reveal
 that the information contained by a card can extend beyond its face value to
 subtle details of the graphics on its back and even its orientation.  This
-reveal, paired with side channels from the question-and-answer component,
-present an opportunity to discuss side channels in more detail.
+reveal
+presents an opportunity to discuss side channels in more detail.
 In our lesson, we discuss side channels as
-a security weakness allows information to be extracted using attributes
-of a system rather than a flaw in an
+a security weakness that allows information to be extracted via attributes
+of a system, rather than a flaw in an
 algorithm.
 We cover how, in the real world,
-potential side channels include
-physical phenomena
+potential side channels can include
+physical phenomena,
 such as
 temperature,
 sound,
 and even electromagnetic output.
 In order to emphasize the impact of such attacks we cover two examples: Van
 Eck Phreaking and the SPECTRE vulnerabilities.
-The lesson further includes conversation about how to
+The former is a technique where images displayed by a computer monitor can be
+detected and reconstructed using off-the-shelf radio hardware.
+The latter is a major vulnerability recently discovered in most major types of
+processors that uses timing information to extract sensitive data from a
+computer's memory.
+The lesson concludes with tips on how to
 reduce the risk of a side channel attack
-by minimizing the number of potential channels
+by minimizing the number of potential channels,
 and actively working to decouple potential
 side channels from secret information.
 
@@ -339,11 +356,16 @@ deck is readily and cheaply available at a magic supply store.
 \subsubsection{The Lesson}
 
 The purpose of this lesson is to show students the importance of correct
-randomness and how an attacker with a small amount of influence can compromise a
+randomness
+that is "fit for purpose," or appropriate for security-sensitive applications.
+It also shows how an attacker
+with a small amount of influence can compromise a
 system.
-As such, we begin by covering the common pitfalls that occur when generating and
+As such, we begin by covering the common pitfalls
+that occur when generating and
 using randomness.
-This foundation is used to explain both direct and input-based attacks on random
+This foundation is used to explain both
+direct and input-based attacks on random
 number generators.
 The explanation of these attacks gives our students the background they need to
 understand how the magician's stooge was able to control the volunteer selection
