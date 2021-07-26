@@ -4,21 +4,24 @@
 
 A magician creates an illusion to hide the secrets of his or her trick.
 The lessons we have developed reverse this situation.
-Instead of hiding secrets, we use our tricks to reveal how three cyberattacks
-work.  This section details how the mechanics of each trick mirrors the
+Instead of hiding secrets, we use our tricks to reveal
+the mysteries behind
+three cyberattacks.
+This section details how the mechanics of each trick mirrors the
 rationale behind the attacks by illustrating both the magician's and
 participants' perspectives.  We also include variations on each trick
 that can
-can improve the
+improve the
 trick's impact or make it easier to perform under certain circumstances.
 
 \subsection{Lesson Layout}
 
 For our lesson we decided to cover three topics: social engineering, side
 channel attacks, and attacks on randomness.  We chose these topics because they
-are highly relevant to the modern information security field and offer a wide
-range of complexity.  Our hope was to illustrate how card magic can be used
-successfully to each anything from simple deceptive scenarios to complicated
+are highly relevant to the modern information security field,
+and offer different levels of complexity.
+Our hope was to illustrate how card magic can be used
+successfully to teach anything from simple deceptive scenarios to complicated
 technical attacks.  We chose the presentation order of our tricks to ease
 students into the lesson before introducing more difficult concepts.
 
@@ -31,9 +34,12 @@ greatest cross-section of victims.  The trick itself
 is a simulation of the attack because it is engineered to give
 the magician multiple opportunities to ask for personal information,
 such as a participants full name or place of birth.  In this case,
-it relies on the magic technique of misdirection, with cards distracting the
+it relies on the magic technique of misdirection,
+with the novel situation presented by the trick
+distracting the
 volunteer participant from the magician's true intention: soliciting data that
-can be used for identity theft.
+can be used to compromise accounts, reset passwords using security questions, or
+carry out identity theft.
 
 At the end of the trick, the magician, who was the lead investigator of the
 study, reveals that this information collection was the real purpose of the
@@ -45,9 +51,8 @@ presentation.
 The magician begins this trick by requesting a student volunteer and stating
 that there is a way to form a psychic bond between the student and a deck of
 cards.  The student shuffles
-approximately
 half of the cards a few times while the magician shuffles the other half.  Once
-this shuffling is complete, the two halves of the deck are combined by placing
+this shuffling is complete, the two halves of the deck are placed
 one on top of the other.
 The magician asks the student
 a few questions to further ``attune'' them to the deck,
@@ -61,7 +66,7 @@ a red card with a numeric value equal
 to their birth month (using the jack and queen for November and December
 respectively).
 Finally, the magician asks the student
-for their birth day and selects a black card with a numeric value
+for their birthday and selects a black card with a numeric value
 equal to the second digit in this day.
 The magician lays these cards out on the table and asks the student to select
 one red card and one black card with which they feel most ``attuned''.
@@ -73,7 +78,7 @@ that it is time to test the student's psychic powers by asking them to
 guess the color of each card in the deck.  Starting with the top of the deck,
 the student provides a guess of either ``red'' or ``black,''  while the magician
 records the guess by placing the card face down on top of the card of the same
-color already on the table.  This forms two piles of cards.  When the half way
+color already on the table.  This forms two piles of cards.  When the half-way
 point of the deck is reached, the two face up cards are placed on top of the
 pile of the opposite color,
 switching which pile each guess
@@ -313,45 +318,58 @@ the function's output.
 
 \subsubsection{From the Audience's Perspective}
 
-The trick begins with the magician announcing that they are going to use a
-cryptographic hash function to choose a volunteer for the next trick.  The
-students in the audience are each asked to provide a random number to
-be
-fed into the function in order to generate a seat number of one student in the
-class.  Using this process, a student is selected and asked to come
-forward.
-The magician explains that they have a magic deck of cards that allows
-anyone to determine what card is on top of it merely by waving their hand over
-it.  The magician shuffles the deck a few times,
-and asks the student
-to concentrate on the top card while passing
-a hand over the deck.
-The student does so and, after a
-moment's hesitation, makes a guess.  The magician then shows the top card to the
-student and the audience revealing that the student's guess was correct.
+The trick begins with the magician announcing that they are going to
+use their experience with card magic to guess the value of card that
+has been randomly selected from the deck.  They expand by explaining that every
+card has different amounts of ink on its face which gives each one a unique
+weight that a trained magician can detect by feel.
+The trick starts with the magician spreading a deck of cards on the table
+in front of the
+audience in order to prove its authenticity.
+The magician then shuffles the deck of cards and deals five cards out onto the
+table.  It is from these five cards that the magician will make their
+prediction.
+In order to head off suspicion that the magician has engineered the trick to
+pick a specific card that they know they it is revealed that
+they will use a software random number generator to
+select the card so that there can be no sleight of hand to select a
+pre-determined card.
+Students are asked to shout out numbers to be fed into the random number
+generator to seed its operation.  After many numbers have been input, the
+magician generates a number between 1 and 5 with each value referring to a
+specific card.  The magician moves the chosen card forward and slides it back
+and forth on the table to get an idea of its weight.  The magician then makes
+their prediction and reveals that it is correct!
 
 \subsubsection{Behind the Scenes}
 
-This trick relies on two key components.  The first is that when
-multiple inputs are provided to a cryptographic hash function, the last input
-has a high amount of influence over functions output.
-The second, is a time-honored
-magic show technique known as a ``using a stooge.''
-A stooge is an individual in league with
-the magician who will pretend to be an involved volunteer in order to make a
-trick possible.  In this trick, the stooge uses a piece of software to decide
-what ``random'' number to provide during the volunteer selection process in
-order to ensure that they are chosen by the magician's hash function.  To do so,
-the stooge must enter each number provided by the other students into their
-software.  Once chosen, the stooge plays their part in the trick and ``guesses''
-a pre-arranged card that the magician has ensured will remain on the top of the
-deck during the shuffling process.
+This trick relies on two components for its successful operation.
+The first comes at the beginning of the trick when the deck is spread out on the
+table before the students.  This movement serves the dual purpose of convincing
+the students that the deck is genuine and gives the magician a chance to
+memorize one or more of the top five cards in the deck.  When the deck is
+shuffled, the magician is careful to not allow the cards that were memorized to
+become mixed in with the rest of the deck.  This allows them to ensure that it
+is these cards that are dealt down onto the table prior to making a prediction.
+
+
+The second key lies in how the random number is generated.
+Rather than
+a true software random number generator, the magician's tool is based on a hash
+function.  This means that, while output appears random, it is anything but.
+As student's shouted numbers are fed into the tool the magician monitors an
+intermediate output.
+This output shows the result of first feeding the students number
+into the hash function, then using modulus to reduce the output to a value
+between zero and four, and finally adding one in order to get a value between
+one and five.
+The magician can use this input to determine when the output will be a number
+corresponding with a card they have memorized and stop supplying inputs.
+
 
 \subsubsection{Variations}
 
-The need to control the top card on the deck may be removed by using a
-special deck of cards that contains fifty-two copies of the same card.  Such a
-deck is readily and cheaply available at a magic supply store.
+...
 
 \subsubsection{The Lesson}
 
@@ -359,7 +377,9 @@ The purpose of this lesson is to show students the importance of correct
 randomness
 that is "fit for purpose," or appropriate for security-sensitive applications.
 It also shows how an attacker
-with a small amount of influence can compromise a
+with a small amount of influence,
+such as when to stop supplying numbers,
+can compromise a
 system.
 As such, we begin by covering the common pitfalls
 that occur when generating and
@@ -368,8 +388,9 @@ This foundation is used to explain both
 direct and input-based attacks on random
 number generators.
 The explanation of these attacks gives our students the background they need to
-understand how the magician's stooge was able to control the volunteer selection
-process.
+understand how why the magician's random number generator was invalid as well as
+many of the most important properties of cryptographic hash functions.
+
 %The trick we use reinforces this using
 %a situation where ``users'' are able to provide input
 %directly to a cryptographic hash function.
