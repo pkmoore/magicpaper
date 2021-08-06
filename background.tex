@@ -243,7 +243,7 @@ themselves and others.
 
 \subsection{Side Channel Attacks}
 
-As the name implies, a side channel; attack is one that strikes indirectly
+As the name implies, a side channel attack strikes a target indirectly
 by tracking seemingly unrelated phenomena
 such as timing information, power consumption, electromagnetic leaks, or even
 sounds.  To mirror this type of attack, the trick
@@ -257,29 +257,34 @@ find a particular card that has been lost in a shuffled deck.
 \subsubsection{From the Audience's Perspective}
 
 The magician begins by opening a new deck of cards, removing the jokers and
-branding cards, and legitimately shuffling it.  A student is asked to
+branding cards, and legitimately shuffling it.  A several students are
+asked to
 select a card from the deck, show it to the audience, memorize it without
 revealing it to the magician, and then return it to the deck.
-The magician shuffles the deck a few more times ensuring that the card has
+The magician shuffles the deck a few more times ensuring that the cards
+have
 been completely lost.
-Lastly, the magician proceeds through the deck face down and picks out the
-student's card when it appears.
+It concludes with the magician going through the deck face down
+until all of the students' cards have been found.
 
 This trick's reveal comes when the magician informs the audience
-the card was found using a secret information side channel present in the
+that the cards were found using a secret
+information side channel present in the
 deck and asks if they have any idea of what it might be.
 At this point, the audience is either stumped or has figured out how the trick
-worked.  In either case,  the second phase of the lesson
+worked.
+
+In either case,  the second phase of the lesson
 introduces additional types of side channels
-by having a pre-selected volunteer (or a teaching assistant)
+by having an assistant
 surreptitiously
 communicate the details of a card
 to the magician.
-The volunteer selects a card and asks the magician questions about its
+The assistant selects a card and asks the magician questions about its
 attributes.
 For example, ``Is my card red or black?''
-When asking these questions the volunteer communicates the true nature of
-what they are conveying
+When asking these questions the volunteer
+telegraphs a response
 by varying the pitch of their voice, vocal cadence, or body language.
 After sufficient questioning, the magician is able to determine which card the
 volunteer picked and asks the audience if they were able to determine the side
@@ -300,12 +305,12 @@ channel used to communicate this information.
 The key to this trick lies in the magician's choice of deck.  Many cheaper card
 decks, such as those given away as branded merchandise,
 have corporate logos or
-text as part of the art on the card back.  Often, this branding can be used to
+text on the card back.  Often, these patterns be used to
 provide information about how a card is oriented in the deck.  Because the trick
 begins with a fresh deck, all cards are oriented in the same direction.  As a
 result, when the student is returning their card to the deck, the magician
 simply has to orient the deck in such a way that the student's card is returned
-in the opposite orientation to the other cards.  During all shuffling
+in the opposite direction to the other cards.  During all shuffling
 operations, the magician may maintain this orientation by rotating one pack of a
 cut deck so that it's post-shuffle orientation matches the other pack.
 To complete the trick, the magician only has to look through the deck of cards
@@ -317,31 +322,30 @@ reveal.
 %
 %...
 
-\subsubsection{The Lesson}
+\subsubsection{Lesson Takeaway}
 
-The purpose of this lesson is to encourage students to think about the
-non-obvious avenues an attacker might use to acquire secret information from a
-system.  A powerful example of such a channel is provided by the tricks reveal
-that the information contained by a card can extend beyond its face value to
-subtle details of the graphics on its back and even its orientation.  This
-reveal
-presents an opportunity to discuss side channels in more detail.
-In our lesson, we discuss side channels as
-a security weakness that allows information to be extracted via attributes
+Side channel attacks are not easily spotted.  Our goal is to
+open the participant's eyes to less
+obvious avenues an attacker might use.
+The reveal of this trick shows how we must not
+take anything at face value, including what information
+a card can contain.
+Subtle details of the graphics on its back and even its orientation in a
+deck enable the magician to identify a card, just as physical phenomena,
+such as temperature, sound, and even electromagnetic output can to
+leak private data.
+This provided a framework
+to discuss side channels
+as a security weakness that allows information to
+be extracted via attributes
 of a system, rather than a flaw in an
 algorithm.
-We cover how, in the real world,
-potential side channels can include
-physical phenomena,
-such as
-temperature,
-sound,
-and even electromagnetic output.
 In order to emphasize the impact of such attacks we cover two examples: Van
 Eck Phreaking and the SPECTRE vulnerabilities.
 The former is a technique where images displayed by a computer monitor can be
 detected and reconstructed using off-the-shelf radio hardware.
-The latter is a major vulnerability recently discovered in most major types of
+The latter is a major vulnerability recently discovered in many popular
+types of
 processors that uses timing information to extract sensitive data from a
 computer's memory.
 The lesson concludes with tips on how to
