@@ -11,7 +11,7 @@ offered twice during the three week workshop, with the lead investigator
 serving as the presenter and magician.  It consisted of three phases, one
 for each topic, and each consisting of a performance of the topic's magic
 trick, followed by a detailed discussion of the topic using the magic trick
-as a scaffold.  A total of AAAAAA students attended the two sessions.
+as a scaffold.  A total of 15 students attended the two sessions.
 
 To measure improvements in participants' mastery of the subject, we
 designed an assessment instrument (shown in figure~\ref{fig:assessment})
@@ -28,15 +28,21 @@ Participants completed the 12 multiple choice questions twice,
 once before our lecture to gather a baseline of
 participants' existing knowledge of the material,
 and again at the conclusion of our
-lecture as a summative assessment to determine if student mastery improved.
+lecture as a post-test to determine if student mastery improved.
 Both assessments used the same questions.
 After taking part in the workshop, participants also evaluated the session
 itself by offering opinions on whether or not they found our lecture
 enjoyable and engaging.
-The summative assessment was given at the conclusion of the lesson
+The post-test was given at the conclusion of the lesson
 with the option to complete it after the lesson in their own time.
-BBB students completed our formative and summative assessments and CCC
-completed both of these components in addition to our survey statements.
+Of the fifteen students that attended our session, ten agreed to participate in
+the study and completed our pre-test. Of these ten, five
+students completed our post-test and survey.  Given the overwhelmingly
+positive feedback we received from our session attendees, we believe the
+decreased number of participants completing the post test can be attributed
+to the awkwardness of an online session and test rather than deficiencies in
+the session itself.
+
 
 \begin{figure*}[htb!]
   \scriptsize
@@ -62,26 +68,94 @@ S3 & I enjoyed the manner in which the material was presented &     &           
 
 \subsection{Results}
 
-Comparing aggregate pre-test and post-test results show an improvement of
-AAA\%.  The majority of this improvement came from better scores on the
-hash function-related questions.  This improvement likely comes from our
-participant population's lack of experience with the area.  The details of
-hash functions are likely to be covered in undergraduate course work rather
-than high-school computer science classes.
+\begin{figure}
+  \centering
+\subfloat[Aggregate results showing number of correct responses and percent of correct responses for each question on both our pre-test and post-test.  Percent correct is based on our total of five responses.]{
+  \begin{tabular}{c | l | l | l}
+Question &  Correct on Pre-test   & Correct on Post-test \\
+\hline
+Q1   & 3 (60\%)  & 5 (100\%) \\
+Q2   & 3 (60\%)  & 4 (80\%)  \\
+Q3   & 5 (100\%) & 5 (100\%) \\
+Q4   & 2 (40\%)  & 5 (100\%) \\
+Q5   & 0 (0\%)   & 0 (0\%)   \\
+Q6   & 5 (100\%) & 5 (100\%) \\
+Q7   & 4 (80\%)  & 5 (100\%) \\
+Q8   & 3 (60\%)  & 5 (100\%) \\
+Q9   & 4 (80\%)  & 3 (60\%)  \\
+Q10  & 4 (80\%)  & 4 (80\%)  \\
+Q11  & 1 (20\%)  & 5 (100\%) \\
+Q12  & 2 (40\%)  & 5 (100\%) \\
+  \end{tabular}}
 
-The next most-improved topic was side channel attacks.  Questions 6 and 7
-showed a marked improvement from AAA\% correct to BBB\% correct.  Answering
-these questions correctly requires students to understand the theory
-behind side
-channel attacks and apply it to several scenarios to identify the correct
-response.  As a result,  improved scores on these questions indicate deeper
-mastery of the material rather than simple memorization of a definition.
+\subfloat[Rows S1, S2, and S3 report number of participants that selected the listed response.  Likert responses that were not chosen by any participant are omitted.]{
+\begin{tabular}{ c | l}
+Statement & Aggregate Responses \\
+\hline
+S1 &  Strongly Agree: 4 Agree: 1 \\
+S2 &  Strongly Agree: 4 Agree: 1 \\
+S3 &  Strongly Agree: 5 \\
+\end{tabular}}
+\caption{Results from our pre-test, post-test, and survey}
+\label{fig:results}
+\end{figure}
 
-The questions related to social engineering showed some improvement, though less
-than the other areas.  This is due to most participants correctly answering
-these questions on the pre-test.  It is likely students currently
-attending high school grew up in a time where education about scams and
-safety on the internet has been ongoing from an early age.
+Overall, aggregate scores shown in Figure~\ref{fig:results}
+show a notable increase across all categories on the post-test.
+Scores increased by 30\% in both the social engineering and attacks on
+randomness sections.  Scores for the side channel attacks section increased
+by 15\%.
+
+The majority of the increase in social engineering scores came from
+Q1, Q2, and Q4.  This indicates an improvement in the technical details
+around social engineering.  Encouragingly, the students were well aware of
+what information should not be shared online suggesting they have been
+warned about these dangers in other places.
+
+The improvements in scores related to attacks on randomness came largely
+from Q11 and Q12.  These questions are particularly important because
+answering them correctly points towards the students having learned two
+key properties of hash functions.  Smaller improvement in Q9 and no
+improvement for Q10 suggest that further emphasis should be placed on
+explaining how these functions may be used in the real world in future
+iterations of the lesson.
+
+The smallest improvement (15\%) came about in the side channel attacks
+scores.  This is largely due to Q9 which proved difficult for students on
+both the pre-test and post-test.  We believe this implies that Q9 is
+flawed in its construction and should be reworked for future sessions.
+
+As can be seen in Figure~\ref{fig:results}, the session scored very highly
+on our Likert-scale statements.  A high majority of students strongly
+agreed that the lesson improved their skills in the covered topics.  A
+similar majority felt the magic-based presentation was useful and
+enjoyable.  A few students offered free response comments describing the
+session as ``fun,'' ``entertaining,'' and ``interesting.''  One response
+stated that the side-channel attack using upside-down cards
+was particularly useful for helping them understand how such attacks are
+structured.
+
+
+%Comparing aggregate pre-test and post-test results show an improvement of
+%AAA\%.  The majority of this improvement came from better scores on the
+%hash function-related questions.  This improvement likely comes from our
+%participant population's lack of experience with the area.  The details of
+%hash functions are likely to be covered in undergraduate course work rather
+%than high-school computer science classes.
+%
+%The next most-improved topic was side channel attacks.  Questions 6 and 7
+%showed a marked improvement from AAA\% correct to BBB\% correct.  Answering
+%these questions correctly requires students to understand the theory
+%behind side
+%channel attacks and apply it to several scenarios to identify the correct
+%response.  As a result,  improved scores on these questions indicate deeper
+%mastery of the material rather than simple memorization of a definition.
+%
+%The questions related to social engineering showed some improvement, though less
+%than the other areas.  This is due to most participants correctly answering
+%these questions on the pre-test.  It is likely students currently
+%attending high school grew up in a time where education about scams and
+%safety on the internet has been ongoing from an early age.
 
 
 \subsection{Instructor Observations}
