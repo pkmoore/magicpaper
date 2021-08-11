@@ -2,6 +2,8 @@
 % \usepackage[hyphens]{url}
 % \usepackage[usenames,dvipsnames]{color}
 \usepackage{comment}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\usepackage{titlesec}
 \usepackage{float}
 \usepackage{lipsum}
 \usepackage{pifont} %used for tickmark and crosses.
@@ -98,6 +100,23 @@
 
 \input{annotations}
 
+% Save Space
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}
+%\setlength{\headsep}{0pt}
+% \setlength{\topskip}{0pt}
+%\setlength{\topmargin}{0pt}
+%\setlength{\topsep}{0pt}
+%\setlength{\partopsep}{0pt}
+\captionsetup{belowskip=-10pt}
+\captionsetup{aboveskip=0pt}
+\titlespacing*{\section}
+{1pt}{1ex}{1ex}
+\titlespacing*{\subsection}
+{1pt}{1ex}{1ex}
+\titlespacing*{\subsubsection}
+{1pt}{1ex}{2ex}
+
 \begin{document}
 
 \title{Cybersecurity Shuffle: Comprehension is in the Cards}
@@ -108,16 +127,20 @@
 \newcommand{\showurlx}{[redacted]}
 
 \author{
-%\IEEEauthorblockN{Justin Cappos}\\
-%New York University\\
-%jcappos@nyu.edu
-%\and
-Use whatever template the conference provides for the paper.tex file.
-% copy the following lines to add more authors
-% \and
-% {\rm Name}\\
-%Name Institution
+  Author One
 }
+\email{authorone@example.com}
+\author{
+  Author Two
+}
+\email{authortwo@example.com}
+\affiliation{
+  \institution{Anonymous Organization}
+  \city{Anonymous City}
+  \state{Anonymous state}
+  \country{Anonymous Country}
+}
+
 
 \input{abstract}
 
