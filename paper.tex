@@ -11,58 +11,18 @@
 \usepackage{xspace}
 \usepackage{datetime}
 
-% To support subfigures
-%\usepackage{caption}
-%\usepackage{subcaption}
-
-% \usepackage{graphicx}
-
 %%%%%%%%%% verbatim related
 \usepackage{fancyvrb}
 \fvset{framesep=2mm,fontsize=\scriptsize,framerule=.1mm,numbersep=1mm,commandchars=\\\{\}}
 \usepackage{listings}
 
-%%%%%%%%%%%%%%%%%%%% pseudocode-related stuff
-%\usepackage[usenames,dvipsnames]{xcolor}
-\newcommand{\codecomment}[1]{\textcolor[rgb]{0.133,0.445,0.133}{#1}}
-\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
-% \usepackage{algorithmic}
-\newfloat{algorithm}{t}{lop}
-% change indentation!!
-%\setlength\fboxsep{0pt}
-\renewcommand\algorithmicindent{1em}
-%\newcommand{\INDSTATE}[1][1]{\State\hspace{#1\algorithmicindent}}
-% \newcommand{\INDSTATE}[1][1]{\State\hspace{2em}}
-%%%%%%%%%%%%%%%%%%%%
 
-% float control
-\renewcommand{\topfraction}{0.9}
-
-\widowpenalty=10000
-\clubpenalty=10000
-
-% \usepackage[small,compact]{titlesec}
-
-% \usepackage{savetrees}
-
-%%%%%%%%%%%%%%%%%%%%
-
-\newtheorem{mydef}{Definition}
-\newtheorem{theorem}{Theorem}[section]
-\newsavebox{\verbbox}
-% \usepackage[stable]{footmisc}
-
-\newif\ifrev
-
-%%%%%%%%%%%%%%%%%%
 \usepackage{hyperref}
 
 \newcommand{\PPH}{{\sc \{Pass\}}\xspace}
 \hypersetup{%
-  pdftitle = {Put your title here.  It will show up when printing or looking at PDF details},
+  pdftitle = {Cybersecurity Shuffle: Comprehension is in the Cards},
   pdfkeywords = {},
- % pdfauthor = { Justin Cappos},
   pdfauthor = { Names removed for anonymous submission},
   bookmarksnumbered,
   bookmarksopen=true,
@@ -74,25 +34,7 @@
 }
 
 
-%%%%%%%%%%%%%%%%%%
-% COMMENT OUT NEXT LINE TO HIDE TODOs
-\revtrue
-%%%%%%%%%%%%%%%%%%
-
-\ifrev
-  \newcommand{\todo}[1]{{\color{red} [TODO: #1]}}
-\else
-  \newcommand{\todo}[1]{}
-\fi
-
-\newcommand{\tickmark}{\ding{51}}
-\newcommand{\xmark}{\ding{55}}
-
-\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
-
-\input{annotations}
-
-\citestyle{acmauthoryear}
+%\citestyle{acmauthoryear}
 
 \begin{document}
 
