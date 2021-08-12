@@ -1,16 +1,8 @@
 \documentclass[sigconf]{acmart}
-% \usepackage[hyphens]{url}
-% \usepackage[usenames,dvipsnames]{color}
 \usepackage{comment}
-\usepackage[font=scriptsize,labelfont=bf]{caption}
-\usepackage{titlesec}
 \usepackage{float}
 \usepackage{lipsum}
 \usepackage{pifont} %used for tickmark and crosses.
-\usepackage{subfig}
-%\usepackage[export]{adjustbox}
-% \usepackage[english]{babel}
-% \usepackage{array}
 \usepackage{multirow}
 % \usepackage{amssymb}
 % \usepackage{amsthm}
@@ -100,36 +92,24 @@
 
 \input{annotations}
 
-% Save Space
-%\setlength{\parskip}{0pt}
-%\setlength{\parsep}{0pt}
-%\setlength{\headsep}{0pt}
-% \setlength{\topskip}{0pt}
-%\setlength{\topmargin}{0pt}
-%\setlength{\topsep}{0pt}
-%\setlength{\partopsep}{0pt}
-\captionsetup{belowskip=-10pt}
-\captionsetup{aboveskip=0pt}
-\titlespacing*{\section}
-{1pt}{1ex}{1ex}
-\titlespacing*{\subsection}
-{1pt}{1ex}{1ex}
-\titlespacing*{\subsubsection}
-{1pt}{1ex}{2ex}
+\citestyle{acmauthoryear}
 
 \begin{document}
 
 \title{Cybersecurity Shuffle: Comprehension is in the Cards}
 
 
-% enable this to de-anonymize!
-%\newcommand{\showurlx}{{\url{https://whatever_the_url.is}}}
-\newcommand{\showurlx}{[redacted]}
-
 \author{
   Author One
 }
 \email{authorone@example.com}
+\affiliation{
+  \institution{Anonymous Organization}
+  \city{Anonymous City}
+  \state{Anonymous state}
+  \country{Anonymous Country}
+}
+
 \author{
   Author Two
 }
@@ -156,7 +136,7 @@
 \input{conclusion}
 
 
-{\footnotesize \bibliographystyle{abbrv}
-\bibliography{bibdata}}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibdata}
 
 \end{document}

@@ -1,9 +1,7 @@
 \section{Study Instrument and Evaluation}
 \label{SEC:evaluation}
 
-\subsection{Method}
-
-The goal of our study was to judge how effective a non-traditional approach
+\paragraph{Method}The goal of our study was to judge how effective a non-traditional approach
 could be in teaching novices about our selected attacks.  To do so,
 we put together a 90 minute Zoom session to be presented at a summer
 computer science workshop for high school students.  The session was
@@ -16,7 +14,7 @@ trick, followed by a detailed discussion that used the magic trick
 as a scaffold.  A total of 15 students attended the two sessions.
 
 To measure improvements in participants' mastery of the subject, we
-designed an assessment instrument (shown in figure~\ref{fig:assessment})
+designed an assessment instrument (shown in Table~\ref{fig:assessment})
 consisting of
 12 multiple choice questions (4 for each topic),
 3 Likert-scale survey statements,
@@ -49,7 +47,7 @@ rather than deficiencies in
 the session itself.
 
 
-\begin{figure}[h]
+\begin{table}[h]
   \scriptsize
   \begin{tabular}{c | p{6cm}}
 Question Text  &     \\
@@ -75,16 +73,14 @@ S3 & I enjoyed the manner in which the material was presented  \\
     appeared on both the pre-test and post-test.  Statements S1 through S3
     appeared only on the post-test.}
 \label{fig:assessment}
-\end{figure}
+\end{table}
 
 
-\subsection{Results}
 
-\begin{figure}
+\begin{table}
   \centering
   \scriptsize
-\subfloat[Aggregate results showing number of correct responses and percent of correct responses for each question on both our pre-test and post-test.  Percent correct is based on our total of five responses.]{
-  \begin{tabular}{c | l | l | l}
+  \begin{tabular}{c | l | l}
 Question &  Correct on Pre-test   & Correct on Post-test \\
 \hline
 Q1   & 3 (60\%)  & 5 (100\%) \\
@@ -99,21 +95,23 @@ Q9   & 4 (80\%)  & 3 (60\%)  \\
 Q10  & 4 (80\%)  & 4 (80\%)  \\
 Q11  & 1 (20\%)  & 5 (100\%) \\
 Q12  & 2 (40\%)  & 5 (100\%) \\
-  \end{tabular}}
+\end{tabular}
 
-\subfloat[Rows S1, S2, and S3 report number of participants that selected the listed response.  Likert responses that were not chosen by any participant are omitted.]{
-\begin{tabular}{ c | l}
-Statement & Aggregate Responses \\
-\hline
-S1 &  Strongly Agree: 4 Agree: 1 \\
-S2 &  Strongly Agree: 4 Agree: 1 \\
-S3 &  Strongly Agree: 5 \\
-\end{tabular}}
-\caption{Results from our pre-test, post-test, and survey}
+%\begin{tabular}{ c | l}
+%Statement & Aggregate Responses \\
+%\hline
+%S1 &  Strongly Agree: 4 Agree: 1 \\
+%S2 &  Strongly Agree: 4 Agree: 1 \\
+%S3 &  Strongly Agree: 5 \\
+%\end{tabular}}
+\caption{ Aggregate results showing number of correct
+  responses and percent of correct responses for
+  each question on both our pre-test and post-test.}
+%Rows S1, S2, and S3 report number of participants that selected the listed response.  Likert responses that were not chosen by any participant are omitted.
 \label{fig:results}
-\end{figure}
+\end{table}
 
-Overall, aggregate scores, shown in Figure~\ref{fig:results},
+\paragraph{Results}Overall, aggregate scores, shown in Table~\ref{fig:results},
 increased across all categories on the post-test.
 Scores for the social engineering and attacks on randomness sections
 increased by 30\% while the side channel attacks section increased by
