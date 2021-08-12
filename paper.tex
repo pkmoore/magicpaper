@@ -1,29 +1,25 @@
 \documentclass[sigconf]{acmart}
-\usepackage{comment}
-\usepackage{float}
-\usepackage{lipsum}
-\usepackage{pifont} %used for tickmark and crosses.
-\usepackage{multirow}
-% \usepackage{amssymb}
-% \usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage[normalem]{ulem}
-\usepackage{xspace}
-\usepackage{datetime}
+%\usepackage{comment}
+%\usepackage{float}
+%% \usepackage{amssymb}
+%% \usepackage{amsthm}
+%\usepackage{amsmath}
+%\usepackage[normalem]{ulem}
+%\usepackage{xspace}
+%\usepackage{datetime}
 
 %%%%%%%%%% verbatim related
-\usepackage{fancyvrb}
-\fvset{framesep=2mm,fontsize=\scriptsize,framerule=.1mm,numbersep=1mm,commandchars=\\\{\}}
-\usepackage{listings}
+%\usepackage{fancyvrb}
+%\fvset{framesep=2mm,fontsize=\scriptsize,framerule=.1mm,numbersep=1mm,commandchars=\\\{\}}
+%\usepackage{listings}
+%
+%
+%\usepackage{hyperref}
 
-
-\usepackage{hyperref}
-
-\newcommand{\PPH}{{\sc \{Pass\}}\xspace}
 \hypersetup{%
   pdftitle = {Cybersecurity Shuffle: Comprehension is in the Cards},
   pdfkeywords = {},
-  pdfauthor = { Names removed for anonymous submission},
+  pdfauthor = { Author One, Author Two},
   bookmarksnumbered,
   bookmarksopen=true,
   colorlinks=true,
@@ -35,6 +31,11 @@
 
 
 %\citestyle{acmauthoryear}
+\setcopyright{acmcopyright}
+\copyrightyear{2021}
+\acmYear{2021}
+
+
 
 \begin{document}
 
@@ -66,7 +67,30 @@
 
 \input{abstract}
 
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003456.10003457.10003527.10003531.10003533</concept_id>
+<concept_desc>Social and professional topics~Computer science education</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003456.10003457.10003527.10003541</concept_id>
+<concept_desc>Social and professional topics~K-12 education</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Social and professional topics~Computer science education}
+\ccsdesc[500]{Social and professional topics~K-12 education}
+
+\keywords{Cybersecurity, Information Security Education, Card Magic, Magic
+Tricks}
+
 \maketitle
+
+
 
 \input{introduction}
 %\input{threat-model}
